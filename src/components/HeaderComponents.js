@@ -1,4 +1,6 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
+
 import styled from 'styled-components';
 import { Feather, MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -11,13 +13,20 @@ const Button = styled.TouchableOpacity`
 
 const ButtonText = styled.Text``;
 
-export const ButtonRight = () => (
-  <Button>
-    <ButtonText>
-      <Feather name="plus" size={28} color="#e9e9e9" />
-    </ButtonText>
-  </Button>
-);
+export const ButtonRight = () => {
+  const { navigate } = useNavigation();
+
+  function handleNavigateToSearch() {
+    navigate('SearchAdress');
+  }
+  return (
+    <Button onPress={handleNavigateToSearch}>
+      <ButtonText>
+        <Feather name="plus" size={28} color="#e9e9e9" />
+      </ButtonText>
+    </Button>
+  );
+};
 
 export const ButtonLeft = () => (
   <Button>

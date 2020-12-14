@@ -39,9 +39,15 @@ export const AirQualityIndexText = styled.Text`
   color: #e9e9e9;
 `;
 
-export const ContainerWeatherForecast = styled.View``;
+export const ContainerWeatherForecast = styled.View`
+  width: 100%;
+  padding: 20px 35px;
+`;
 
-export const MoreDetails = styled.Text``;
+export const MoreDetails = styled.Text`
+  align-self: flex-end;
+  padding-bottom: 10px;
+`;
 
 export const WeatherForecast = styled.Text``;
 

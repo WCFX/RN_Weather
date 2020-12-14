@@ -11,10 +11,11 @@ import {
   AirQualityIndexText,
   ContainerWeatherForecast,
   MoreDetails,
-  WeatherForecast,
   FiveDayForecastButton,
   FiveDayForecastText,
 } from './styles';
+
+import WeatherForecast from '../../components/WeatherForecast';
 
 const Home = () => {
   const [location, setLocation] = useState('Canoas', 'RS');
@@ -34,7 +35,7 @@ const Home = () => {
       </ContainerTemperature>
 
       <ContainerWeatherForecast>
-        <MoreDetails>Mais detalhes </MoreDetails>
+        <MoreDetails>Mais detalhes > </MoreDetails>
         <WeatherForecast />
         <WeatherForecast />
         <WeatherForecast />
